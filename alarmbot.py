@@ -3,7 +3,7 @@ from discord.ext import commands
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 import os
-from dotenv import load_dotenv  # dotenv 불러오기
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -24,7 +24,6 @@ def monday_message():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
         bot.loop.create_task(channel.send("@everyone \n🌞 월요일 아침입니다! \n한 주를 힘차게 시작하세요!"))
-
 
 # 화요일 오전 10시에 보내는 메시지
 def tuesday_am_message():
