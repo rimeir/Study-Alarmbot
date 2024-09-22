@@ -23,13 +23,13 @@ CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))
 def monday_message():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
-        bot.loop.create_task(channel.send("@everyone \n🌞 월요일 아침입니다! \n한 주를 힘차게 시작하세요!"))
+        bot.loop.create_task(channel.send("@everyone \n📅 스터디 마감 D-1! \n이번 주도 화이팅!"))
 
 # 화요일 오전 10시에 보내는 메시지
 def tuesday_am_message():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
-        bot.loop.create_task(channel.send("@everyone \n📅 스터디 마감 D-1! \n모두 스터디 화이팅!"))
+        bot.loop.create_task(channel.send("@everyone \n📅 스터디 마감 D-0! \n모두 스터디 화이팅!"))
 
 # 화요일 오후 10시에 보내는 메시지
 def tuesday_pm_message():
