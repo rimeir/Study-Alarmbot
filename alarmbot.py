@@ -19,7 +19,7 @@ scheduler = AsyncIOScheduler()
 BOT_TOKEN = os.getenv('DISCORD_BOT_TOKEN')
 CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))
 
-# 코테 스터디 알람
+# 스터디 알람
 # 월요일 오전 10시에 보내는 메시지
 def ct_mon_mes():
     channel = bot.get_channel(CHANNEL_ID)
@@ -50,7 +50,7 @@ def EIP_mes():
 async def on_ready():
     print(f'{bot.user}로 로그인되었습니다.')
 
-    # 코테 스터디 알람
+    # 스터디 알람
     # 매주 월요일 오전 10시에 메시지 보내기
     scheduler.add_job(ct_mon_mes, CronTrigger(day_of_week="mon", hour=10, minute=0))
 
