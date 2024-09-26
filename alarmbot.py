@@ -39,7 +39,6 @@ def ct_tue_pm_mes():
         bot.loop.create_task(channel.send("@everyone \n📅 스터디 마감 2시간 전! \n잘 제출되었는지 확인하세요!"))
 
 # 정처기 알람
-# 월요일 오후 6시에 보내는 메시지
 def EIP_mes():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
