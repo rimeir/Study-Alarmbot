@@ -61,7 +61,7 @@ async def on_ready():
 
     # 정처기 알람
     # 매주 월, 수, 금요일 오후 6시에 메시지 보내기
-    scheduler.add_job(ct_tue_pm_mes, CronTrigger(day_of_week="mon,wed,fri", hour=18, minute=0))
+    scheduler.add_job(EIP_mes, CronTrigger(day_of_week="mon,wed,fri", hour=18, minute=0))
 
     scheduler.start()
 
