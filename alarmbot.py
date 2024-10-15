@@ -42,7 +42,7 @@ def ct_tue_pm_mes():
 def keep_mes():
     channel = bot.get_channel(CHANNEL_ID)
     if channel:
-        bot.loop.create_task(channel.send("@everyone \n👍 Keep 작성 마감 1시간 전! \n무도 노션 회고에 오늘 할일을 작성했는지 확인하세요!"))
+        bot.loop.create_task(channel.send("@everyone \n👍 Keep 작성 마감 1시간 전! \n노션 회고에 오늘 할 일을 작성했는지 확인하세요!"))
 
 
 @bot.event
