@@ -53,7 +53,7 @@ async def todo_mes():
     month_day = now.strftime('%m/%d')
     weekday = DAYS_OF_WEEK[now.weekday()]
     if channel:
-        await channel.send(f"@everyone\n👍 {month_day}({weekday}) 오늘의 할 일! \n해당 메시지 스레드로 오늘 할 일을 작성해주세요!")
+        await channel.send(f"👍 {month_day}({weekday}) 오늘의 할 일! @everyone\n해당 메시지 스레드로 오늘 할 일을 12시까지 작성해주세요!")
 
 # 오늘 할 일 매주 월~토요일까지 오전 10시에 알람 설정
 def todo_alarm():
