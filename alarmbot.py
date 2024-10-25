@@ -58,7 +58,7 @@ async def todo_mes():
 # 오늘 할 일 매주 월~토요일까지 오전 10시에 알람 설정
 def todo_alarm():
     for day in days:
-        getattr(schedule.every(), day).at("10:00").do(
+        getattr(schedule.every(), day).at("09:00").do(
             lambda: asyncio.run_coroutine_threadsafe(todo_mes(), bot.loop)
         )
 
