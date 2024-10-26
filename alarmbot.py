@@ -25,7 +25,7 @@ CHANNEL_ID = int(os.getenv('DISCORD_CHANNEL_ID'))
 CHANNEL_ID_TODO = int(os.getenv('DISCORD_CHANNEL_ID_TODO'))
 
 DAYS_OF_WEEK = ['월', '화', '수', '목', '금', '토', '일']
-days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 
 # 스터디 알람
 # 월요일 오전 10시에 보내는 메시지
@@ -55,7 +55,7 @@ async def todo_mes():
     if channel:
         await channel.send(f"👍 {month_day}({weekday}) 오늘의 할 일! @everyone\n해당 메시지 스레드로 오늘 할 일을 12시까지 작성해주세요!")
 
-# 오늘 할 일 매주 월~토요일까지 오전 10시에 알람 설정
+# 오늘 할 일 매일 오전 9시에 알람 설정
 def todo_alarm():
     for day in days:
         getattr(schedule.every(), day).at("09:00").do(
