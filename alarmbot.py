@@ -80,7 +80,7 @@ async def on_ready():
     scheduler.add_job(ct_tue_am_mes, CronTrigger(day_of_week="tue", hour=10, minute=0))
 
     # 매주 화요일 오후 10시에 메시지 보내기
-    scheduler.add_job(ct_tue_pm_mes, CronTrigger(day_of_week="wed", hour=22, minute=0))
+    scheduler.add_job(ct_tue_pm_mes, CronTrigger(day_of_week="tue", hour=22, minute=0))
 
     # 오늘 할 일 알람 설정
     todo_alarm()
