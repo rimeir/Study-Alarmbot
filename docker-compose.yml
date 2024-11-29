@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    build:
+      context: .
+    environment:
+      DISCORD_BOT_TOKEN: "${DISCORD_BOT_TOKEN}"
+      DISCORD_CHANNEL_ID: "${DISCORD_CHANNEL_ID}"
+      DISCORD_CHANNEL_ID_TODO: "${DISCORD_CHANNEL_ID_TODO}"
+      DISCORD_CHANNEL_ID_TEST: "${DISCORD_CHANNEL_ID_TEST}"
+    container_name: discord-bot
+    restart: unless-stopped
